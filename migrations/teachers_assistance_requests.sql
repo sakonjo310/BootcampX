@@ -6,9 +6,9 @@ CREATE TABLE teachers (
     is_active BOOLEAN DEFAULT TRUE
 );
 
-CREATE TABLE assistnace_request (
+CREATE TABLE assistance_requests (
     id SERIAL PRIMARY KEY NOT NULL,
-    assignemnt_id INTEGER REFERENCES assignments(id) ON DELETE CASCADE,
+    assignment_id INTEGER REFERENCES assignments(id) ON DELETE CASCADE,
     student_id INTEGER REFERENCES students(id) ON DELETE CASCADE,
     teacher_id INTEGER REFERENCES teachers(id) ON DELETE CASCADE,
     created_at TIMESTAMP,
